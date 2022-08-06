@@ -1,3 +1,9 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
 /* Main */
 body 
 {
@@ -6,10 +12,42 @@ body
     background-color: black;
 }
 
+@media (min-width: 576px)
+{
+    .container
+    {
+        background-color: black;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .container
+    {
+        background-color: gray;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .container
+    {
+        background-color: white;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .container
+    {
+        background-color: aqua;
+    }
+}
 .container
 {
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
 } 
 
 /* Nav Bar */
@@ -56,22 +94,11 @@ body
     color: #ffffff;
 }
 
-.brand
-{
-    color: white;
-}
-
 /* Portfolio */
 
 
 
 
-
-* 
-{
-    margin: 0px;
-    padding: 0px;
-}
 
 .intro 
 {
