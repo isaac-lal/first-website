@@ -2,6 +2,7 @@
 {
     margin: 0px;
     padding: 0px;
+    font-family: 'Times New Roman', Times, serif
 }
 
 /* Main */
@@ -72,8 +73,9 @@ body
     padding: 0px;
     align-items: center;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
+    position: relative;
 }
 
 .IL1 
@@ -82,7 +84,7 @@ body
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
+    width: 250px;
 }
 
 .RainyNYC
