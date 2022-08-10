@@ -9,10 +9,10 @@ body
 {
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    background-color: black; 
 }
 
-.container
+.container-fluid
 {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,11 +20,12 @@ body
 } 
 
 /* Nav Bar */
-.nav-wrapper 
+.nav-wrapper
 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    background-color: #212121;
 }
 
 .left-side
@@ -70,7 +71,7 @@ body
     margin: 0px;
     padding: 0px;
     align-items: center;
-    color: white;
+    color: #ffffff;
     font-size: 30px;
     text-align: center;
 }
