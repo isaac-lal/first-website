@@ -1,59 +1,56 @@
-*
-{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-body
-{
+body {
     margin: 0px;
     padding: 0px;
     background-color: black; 
 }
 
 /*----------- HOME -----------*/
-.home
-{
+.header {
     min-height: 100vh;
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
-nav
-{
+nav {
     display: flex;
-    padding: 2% 6%;
+    padding: 0px;
     justify-content: space-between;
     align-items: center;
     background-color: #212121;
-    padding: 10px;
 }
 
-.nav-links
-{
+nav h1 {
+    text-align: left;
+    padding: 10px;
+    color: #68BBE3;
+}
+
+.nav-links {
     flex: 1;
     text-align: right;
 }
 
-.nav-links ul li 
-{
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 }
 
-.nav-links ul li a
-{
+.nav-links ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
 }
 
-.nav-links ul li::after
-{
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -63,13 +60,11 @@ nav
     transition: 0.25s;
 }
 
-.nav-links ul li:hover::after
-{
+.nav-links ul li:hover::after {
     width: 100%;
 }
 
-.intro
-{
+.intro {
     width: 90%;
     color: #fff;
     position: absolute;
@@ -79,73 +74,66 @@ nav
     text-align: center;
 }
 
-.intro h1
-{
+.intro h1 {
     font-size: 65px;
-    transform: translate(0%, -110%);
+    transform: translate(0%, -80%);
 }
 
-.intro h3
-{
+.intro h3 {
     font-size: 30px;
     padding: 10px;
 }
 
-.intro p
-{
+.intro p {
     margin: 10px 0 40px;
     font-size: 15px;
     color: #fff;
 }
 
-.more-about-me
-{
+.more-about-me {
     display: inline-block;
     text-decoration: none;
     color: #fff;
     border: 1px solid #fff;
     padding: 12px 34px;
-    font-size: 18px;
+    font-size: 38px;
     font-style: bold;
     background: transparent;
     position: relative;
     cursor: pointer;
 }
 
-.more-about-me:hover
-{
-    border: 1px solid black;
-    background: white;
+.more-about-me:hover {
+    border: 2px solid white;
+    background: #68BBE3;
     transition: 1s;
-    color: black;
+    color: #fff;
     text-decoration: none;
 }
 
-.IL1 
-{
+nav .fa {
+    display: none;
+}
+
+.IL1 {
     clip-path: circle();
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 250px;
-    transform: translate(0%, -5%);
 }
 
 /*----------- ABOUT -----------*/
-.about
-{
+.about {
     min-height: 100vh;
     width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
-.description
-{
-    width: 95%;
+.description {
+    margin: 20px;
     color: #fff;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    text-align: left;
 }
 
 
@@ -157,30 +145,14 @@ nav
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container-fluid
-{
+/*----------- CONTACT -----------*/
+.container-fluid {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
 } 
 
-.nav-wrapper
-{
+.nav-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -188,38 +160,83 @@ nav
     background-color: #000000;
 }
 
-.left-side
-{
+.left-side {
     display: flex;
 }
 
-.nav-wrapper > .left-side > div
-{
+.nav-wrapper > .left-side > div {
     margin-right: 20px;
     font-size: 0.9em;
     text-transform: uppercase;
 }
 
-.nav-link-wrapper
-{
+.nav-link-wrapper {
     height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
 }
 
-.nav-link-wrapper a 
-{
+.nav-link-wrapper a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.5s;
 }
 
-.nav-link-wrapper:hover
-{
-    border-bottom: 1px solid #0E86D4;
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid #68BBE3;
 }
 
-.nav-link-wrapper a:hover
-{
+.nav-link-wrapper a:hover {
     color: #68BBE3;
+}
+
+
+
+/* Smaller Screens */
+@media(max-width: 700px) {
+    .intro h1 {
+        font-size: 50px;
+    }
+    .intro h3 {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .more-about-me {
+        font-size: 24px;
+    }
+
+    .IL1 {
+        width: 200px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #68BBE3;
+        height: 100vh;
+        width: 150px;
+        top: 0px;
+        right: -150px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.75s;
+    }
+    nav h1 {
+        font-size: 32px;
+    }
+    nav .fa-solid {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 0px;
+        justify-content: space-between;
+        display: inline-block;
+    }
+    
+
 }

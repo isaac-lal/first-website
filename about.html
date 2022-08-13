@@ -7,37 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Isaac Lal</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="images/fontawesome-icons/css/all.css">
 </head>
 
 <body>
     <section class="about">
 
         <nav>
-            <div class="nav-links">
+            <h1>isaaclal.com</h1>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick=hideMenu()></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa-solid fa-bars" onclick=showMenu()></i>
         </nav>
 
         <div class="description">
-            <h1>About Me</h1>
-            <p>Hi! My name is Isaac Lal and I am striving to become a Software Engineer in the future.<br><br>
-            
-            Currently, I’m a lower sophomore at Hunter College and studying Computer Science as my major. 
-            On top of being determined to excel in all my classes, I am also working at coding internships to 
-            obtain additional work experience and further progress my skillset. <br><br>
+            <div class="about-col"></div>
+                <h1>About Me</h1>
+                <p>
+                Hi! My name is Isaac Lal and I am striving to become a Software Engineer in the future. <br><br>
+
+                Currently, I’m a lower sophomore at Hunter College and studying Computer Science as my major. 
+                On top of being determined to excel in all my classes, I am gaining outside coding experience through internships, programs, and courses to further progress my skillset. 
+                In addition, I’m working on my own personal projects such as developing my own personal website portfolio and coding my own game. <br><br>
                 
-            On the side, I’m working on my own personal projects such as developing my own website, 
-            coding my own game, and understanding the fundamental concepts of coding and development.<br><br>
+                As I continue in my career, the prospect of becoming a Software Engineer is in sight,
+                and I am determined to endure and overcome these challenges in order to make that prospect come true!<br><br>
                 
-            As I continue in my career, the prospect of becoming a Software Engineer is in sight, 
-            and I am determined to endure and overcome these challenges in order to make that prospect come true!</p>
+                Proficiency knowledge of programming languages respectfully: Python, JavaScript/TypeScript, C/C++, HTML, CSS, C#, and Java.<br><br>
+                </p>
+            </div>
         </div>
 
     </section>
@@ -49,6 +57,19 @@
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
             crossorigin="anonymous"></script>
+
+<!---------- JavaScript Toggle Menu ----------->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMenu() {
+            navLinks.style.right = "0px";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-150px";
+        }
+    </script>
 </body>
 
 </html>
