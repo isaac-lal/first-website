@@ -11,7 +11,9 @@ body {
     background-color: black; 
 }
 
-/*----------- NAVIGATION -----------*/
+
+
+/*----------- NAV BAR -----------*/
 
 header {
     background: #212121;
@@ -59,6 +61,7 @@ label.logo {
     margin: auto;
     transition: 0.25s;
 }
+
 .nav-link:hover::after {
     width: 100%;
 }
@@ -77,6 +80,8 @@ label.logo {
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
+
+
 
 /*----------- HOME -----------*/
 .intro {
@@ -98,6 +103,7 @@ label.logo {
 .intro h3 {
     font-size: 23px;
     padding: 10px;
+    transform: translate(0%, -80%);
 }
 
 .more-about-me {
@@ -107,6 +113,7 @@ label.logo {
     border: 1px solid white;
     padding: 12px 34px;
     font-size: 26px;
+    transform: translate(0%, -70%);
     font-style: bold;
     background: transparent;
     position: relative;
@@ -129,6 +136,8 @@ label.logo {
     width: 250px;
 }
 
+
+
 /*----------- ABOUT -----------*/
 .about {
     min-height: 100vh;
@@ -143,6 +152,59 @@ label.logo {
 }
 
 
+
+/*----------- FOOTER -----------*/
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #212121; 
+    font-family: sans-serif;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.socials a i {
+    font-size: 30px;
+    transition: color .5s ease
+}
+
+.socials a:hover i {
+    color: deepskyblue;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
 
 
 
@@ -186,23 +248,25 @@ label.logo {
     }
 
     .intro h1 {
-        font-size: 50px;
+        font-size: 55px;
     }
 
     .intro h3 {
         font-size: 20px;
         padding: 10px;
+        transform: translate(0%, -80%);
     }
 
     .more-about-me {
         font-size: 20px;
+        transform: translate(0%, -70%);
     }
 
     .IL1 {
-        width: 200px;
+        width: 225px;
     }
 
     label.logo {
-        font-size: 32px;
+        font-size: 40px;
     }
 }
