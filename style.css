@@ -228,12 +228,12 @@ footer {
 
     .nav-menu {
         position: fixed;
-        left: -100%;
+        right: -100%;
         top: 70px;
         gap: 0;
         flex-direction: column;
         background-color: #212121;
-        width: 100%;
+        width: 20%;
         text-align: center;
         transition: 0.3s;
         z-index: 1;
@@ -244,7 +244,7 @@ footer {
     }
 
     .nav-menu.active {
-        left: 0;
+        right: 0;
     }
 
     .intro h1 {
