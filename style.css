@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -10,63 +11,77 @@ body {
     background-color: black; 
 }
 
-/*----------- HOME -----------*/
-.header {
-    min-height: 100vh;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+/*----------- NAVIGATION -----------*/
+
+header {
+    background: #212121;
 }
 
-nav {
+label.logo {
+    text-align: left;
+    font-size: 45px;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+.navbar {
+    min-height: 70px;
     display: flex;
-    padding: 0px;
     justify-content: space-between;
     align-items: center;
-    background-color: #212121;
+    padding: 0 24px;
 }
 
-nav h1 {
-    text-align: left;
-    padding: 10px;
-    color: #68BBE3;
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links ul li {
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
     list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
 }
 
-.nav-links ul li a {
-    color: #fff;
+.nav-link {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
+    transition: 0.25s;
 }
 
-.nav-links ul li::after {
+.nav-link:hover {
+    color: deepskyblue;
+}
+
+.nav-link:after {
     content: '';
     width: 0%;
     height: 2px;
-    background: #fff;
+    background: white;
     display: block;
     margin: auto;
     transition: 0.25s;
 }
-
-.nav-links ul li:hover::after {
+.nav-link:hover::after {
     width: 100%;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/*----------- HOME -----------*/
 .intro {
     width: 90%;
-    color: #fff;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,26 +92,21 @@ nav h1 {
 .intro h1 {
     font-size: 65px;
     transform: translate(0%, -80%);
+    font-weight: bolder;
 }
 
 .intro h3 {
-    font-size: 30px;
+    font-size: 23px;
     padding: 10px;
-}
-
-.intro p {
-    margin: 10px 0 40px;
-    font-size: 15px;
-    color: #fff;
 }
 
 .more-about-me {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
+    color: white;
+    border: 1px solid white;
     padding: 12px 34px;
-    font-size: 38px;
+    font-size: 26px;
     font-style: bold;
     background: transparent;
     position: relative;
@@ -105,14 +115,10 @@ nav h1 {
 
 .more-about-me:hover {
     border: 2px solid white;
-    background: #68BBE3;
+    background: deepskyblue;
     transition: 1s;
-    color: #fff;
+    color: white;
     text-decoration: none;
-}
-
-nav .fa {
-    display: none;
 }
 
 .IL1 {
@@ -133,110 +139,70 @@ nav .fa {
 
 .description {
     margin: 20px;
-    color: #fff;
+    color: white;
 }
 
 
-
-
-
-
-
-
-
-
-/*----------- CONTACT -----------*/
-.container-fluid {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-} 
-
-.nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 0px;
-    background-color: #000000;
-}
-
-.left-side {
-    display: flex;
-}
-
-.nav-wrapper > .left-side > div {
-    margin-right: 20px;
-    font-size: 0.9em;
-    text-transform: uppercase;
-}
-
-.nav-link-wrapper {
-    height: 22px;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s;
-}
-
-.nav-link-wrapper a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.5s;
-}
-
-.nav-link-wrapper:hover {
-    border-bottom: 1px solid #68BBE3;
-}
-
-.nav-link-wrapper a:hover {
-    color: #68BBE3;
-}
 
 
 
 /* Smaller Screens */
-@media(max-width: 700px) {
+@media(max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #212121;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
     .intro h1 {
         font-size: 50px;
     }
+
     .intro h3 {
         font-size: 20px;
         padding: 10px;
     }
+
     .more-about-me {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .IL1 {
         width: 200px;
     }
-    .nav-links ul li {
-        display: block;
-    }
-    .nav-links {
-        position: absolute;
-        background: #68BBE3;
-        height: 100vh;
-        width: 150px;
-        top: 0px;
-        right: -150px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.75s;
-    }
-    nav h1 {
+
+    label.logo {
         font-size: 32px;
     }
-    nav .fa-solid {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    .nav-links ul {
-        padding: 0px;
-        justify-content: space-between;
-        display: inline-block;
-    }
-    
-
 }
