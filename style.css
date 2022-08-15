@@ -6,17 +6,22 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0px;
     padding: 0px;
     background-color: black; 
 }
 
+/*----------- NAV BAR (COMPLETE) -----------*/
 
-
-/*----------- NAV BAR -----------*/
-
-header {
+nav {
     background: #212121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
 }
 
 label.logo {
@@ -26,19 +31,11 @@ label.logo {
     color: deepskyblue;
 }
 
-.navbar {
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-}
-
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -83,7 +80,7 @@ label.logo {
 
 
 
-/*----------- HOME -----------*/
+/*----------- HOME (COMPLETE) -----------*/
 .intro {
     width: 90%;
     color: white;
@@ -138,6 +135,19 @@ label.logo {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------- ABOUT -----------*/
 .about {
     min-height: 100vh;
@@ -151,37 +161,65 @@ label.logo {
     color: white;
 }
 
-
-
-/*----------- FOOTER -----------*/
-footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background: #212121; 
-    font-family: sans-serif;
+.about-section {
+    height: 50vh;
+    width: 100%;
+    height:auto;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/background/RainyNYC.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
     color: white;
 }
 
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+
+/*----------- BLOG -----------*/
+
+
+
+/*----------- CONTACT -----------*/
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- FOOTER (COMPLETE) -----------*/
+footer {
+    margin-top: auto;
+    padding-top: 10px;
+    background: #212121; 
+    font-family: sans-serif;
 }
 
 .socials {
     list-style: none;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-top: 10px;
 }
 
 .socials li {
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .socials a {
@@ -198,13 +236,29 @@ footer {
     color: deepskyblue;
 }
 
-.footer-bottom {
+footer p {
     text-align: center;
-}
-
-.footer-bottom p {
+    color: white;
     font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
