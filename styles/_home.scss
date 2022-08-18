@@ -1,0 +1,51 @@
+.intro {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 65px;
+    transform: translate(0%, -80%);
+    font-weight: bolder;
+}
+
+.intro h3 {
+    font-size: 23px;
+    padding: 10px;
+    transform: translate(0%, -80%);
+}
+
+.more-about-me {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 26px;
+    transform: translate(0%, -70%);
+    font-style: bold;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.more-about-me:hover {
+    border: 2px solid white;
+    background: deepskyblue;
+    transition: 1s;
+    color: white;
+    text-decoration: none;
+}
+
+.IL1 {
+    clip-path: circle();
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}

@@ -1,0 +1,61 @@
+nav {
+    background: #212121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+label.logo {
+    text-align: left;
+    font-size: 45px;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.nav-link:hover {
+    color: deepskyblue;
+}
+
+.nav-link:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: deepskyblue;
+    display: block;
+    margin: auto;
+    transition: 0.25s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}

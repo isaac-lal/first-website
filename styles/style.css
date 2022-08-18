@@ -1,0 +1,251 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+nav {
+  background: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+label.logo {
+  text-align: left;
+  font-size: 45px;
+  font-weight: bold;
+  color: deepskyblue;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  color: deepskyblue;
+}
+
+.nav-link:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: deepskyblue;
+  display: block;
+  margin: auto;
+  transition: 0.25s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.intro {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 65px;
+  transform: translate(0%, -80%);
+  font-weight: bolder;
+}
+
+.intro h3 {
+  font-size: 23px;
+  padding: 10px;
+  transform: translate(0%, -80%);
+}
+
+.more-about-me {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 26px;
+  transform: translate(0%, -70%);
+  font-style: bold;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.more-about-me:hover {
+  border: 2px solid white;
+  background: deepskyblue;
+  transition: 1s;
+  color: white;
+  text-decoration: none;
+}
+
+.IL1 {
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+.about {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.description {
+  margin: 20px;
+  color: white;
+}
+
+.about-section {
+  height: 50vh;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/background/RainyNYC.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.location {
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.location iframe {
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 10px;
+  background: #212121;
+  font-family: sans-serif;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.socials li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+}
+
+.socials a i {
+  font-size: 30px;
+  transition: color 0.5s ease;
+}
+
+.socials a:hover i {
+  color: deepskyblue;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 65px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #212121;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  .intro h1 {
+    font-size: 55px;
+  }
+  .intro h3 {
+    font-size: 20px;
+    padding: 10px;
+    transform: translate(0%, -80%);
+  }
+  .more-about-me {
+    font-size: 20px;
+    transform: translate(0%, -70%);
+  }
+  .IL1 {
+    width: 225px;
+  }
+  label.logo {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */

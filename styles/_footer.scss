@@ -1,0 +1,37 @@
+footer {
+    margin-top: auto;
+    padding-top: 10px;
+    background: #212121; 
+    font-family: sans-serif;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.socials li {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.socials a i {
+    font-size: 30px;
+    transition: color .5s ease
+}
+
+.socials a:hover i {
+    color: deepskyblue;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
