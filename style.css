@@ -14,8 +14,8 @@ body {
     background-color: black; 
 }
 
-/*----------- NAV BAR (COMPLETE) -----------*/
 
+/*----------- NAV BAR (COMPLETE) -----------*/
 nav {
     background: #212121;
     display: flex;
@@ -53,7 +53,7 @@ label.logo {
     content: '';
     width: 0%;
     height: 2px;
-    background: white;
+    background: deepskyblue;
     display: block;
     margin: auto;
     transition: 0.25s;
@@ -77,7 +77,6 @@ label.logo {
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
-
 
 
 /*----------- HOME (COMPLETE) -----------*/
