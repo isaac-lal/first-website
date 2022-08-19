@@ -49,3 +49,24 @@
     margin-right: auto;
     width: 250px;
 }
+
+@media(max-width: 768px) {
+    .intro h1 {
+        font-size: 55px;
+    }
+
+    .intro h3 {
+        font-size: 20px;
+        padding: 10px;
+        transform: translate(0%, -80%);
+    }
+
+    .more-about-me {
+        font-size: 20px;
+        transform: translate(0%, -70%);
+    }
+
+    .IL1 {
+        width: 225px;
+    }
+}
