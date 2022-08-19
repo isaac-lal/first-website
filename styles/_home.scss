@@ -1,23 +1,31 @@
-.intro {
-    width: 90%;
+.home {
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    background-image: url(../images/background/space.jpeg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
-.intro h1 {
+.home video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home h1 {
     font-size: 65px;
-    transform: translate(0%, -80%);
-    font-weight: bolder;
+    transform: translate(0%, -90%);
+    font-weight: 600;
 }
 
-.intro h3 {
+.home h3 {
     font-size: 23px;
-    padding: 10px;
-    transform: translate(0%, -80%);
+    transform: translate(0%, -160%);
 }
 
 .more-about-me {
@@ -27,7 +35,7 @@
     border: 1px solid white;
     padding: 12px 34px;
     font-size: 26px;
-    transform: translate(0%, -70%);
+    transform: translate(0%, -60%);
     font-style: bold;
     background: transparent;
     position: relative;
@@ -51,19 +59,16 @@
 }
 
 @media(max-width: 768px) {
-    .intro h1 {
+    .home h1 {
         font-size: 55px;
     }
 
-    .intro h3 {
+    .home h3 {
         font-size: 20px;
-        padding: 10px;
-        transform: translate(0%, -80%);
     }
 
     .more-about-me {
         font-size: 20px;
-        transform: translate(0%, -70%);
     }
 
     .IL1 {

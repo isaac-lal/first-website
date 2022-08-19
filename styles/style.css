@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Source Serif Pro", serif;
 }
 
 body {
@@ -19,13 +19,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 10px 24px;
 }
 
 label.logo {
   text-align: left;
   font-size: 45px;
-  font-weight: bold;
+  font-weight: 900;
   color: deepskyblue;
 }
 
@@ -110,26 +110,35 @@ label.logo {
     font-size: 40px;
   }
 }
-.intro {
-  width: 90%;
+.home {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  background-image: url(../images/background/space.jpeg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
-.intro h1 {
+.home video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.home h1 {
   font-size: 65px;
-  transform: translate(0%, -80%);
-  font-weight: bolder;
+  transform: translate(0%, -90%);
+  font-weight: 600;
 }
 
-.intro h3 {
+.home h3 {
   font-size: 23px;
-  padding: 10px;
-  transform: translate(0%, -80%);
+  transform: translate(0%, -160%);
 }
 
 .more-about-me {
@@ -139,7 +148,7 @@ label.logo {
   border: 1px solid white;
   padding: 12px 34px;
   font-size: 26px;
-  transform: translate(0%, -70%);
+  transform: translate(0%, -60%);
   font-style: bold;
   background: transparent;
   position: relative;
@@ -164,24 +173,28 @@ label.logo {
 }
 
 @media (max-width: 768px) {
-  .intro h1 {
+  .home h1 {
     font-size: 55px;
   }
-  .intro h3 {
+  .home h3 {
     font-size: 20px;
-    padding: 10px;
-    transform: translate(0%, -80%);
   }
   .more-about-me {
     font-size: 20px;
-    transform: translate(0%, -70%);
   }
   .IL1 {
     width: 225px;
   }
 }
 .about {
+  height: 50vh;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/background/RainyNYC.jpg);
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
+  text-align: center;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -189,17 +202,6 @@ label.logo {
 
 .description {
   margin: 20px;
-  color: white;
-}
-
-.about-section {
-  height: 50vh;
-  width: 100%;
-  height: auto;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/background/RainyNYC.jpg);
-  background-position: center;
-  background-size: cover;
-  text-align: center;
   color: white;
 }
 
@@ -215,9 +217,8 @@ label.logo {
 
 footer {
   margin-top: auto;
-  padding-top: 10px;
+  padding: 10px;
   background: #212121;
-  font-family: sans-serif;
 }
 
 .socials {
@@ -227,7 +228,7 @@ footer {
 }
 
 .socials li {
-  margin: 0 10px;
+  margin: 0px 10px;
   cursor: pointer;
 }
 
@@ -249,4 +250,5 @@ footer p {
   text-align: center;
   color: white;
   font-size: 14px;
+  padding-top: 15px;
 }/*# sourceMappingURL=style.css.map */
