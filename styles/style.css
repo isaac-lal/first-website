@@ -75,6 +75,41 @@ label.logo {
   background-color: white;
 }
 
+@media (max-width: 576px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 60px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #212121;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  label.logo {
+    font-size: 37px;
+  }
+}
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -131,16 +166,18 @@ label.logo {
 }
 
 .home h1 {
+  position: relative;
+  top: -70px;
   padding: 0px 30px;
   font-size: 65px;
-  transform: translate(0%, -90%);
   font-weight: 600;
 }
 
 .home h3 {
+  position: relative;
+  top: -45px;
   padding: 0px 20px;
   font-size: 23px;
-  transform: translate(0%, -160%);
 }
 
 .more-about-me {
@@ -150,10 +187,10 @@ label.logo {
   border: 1px solid white;
   padding: 12px 34px;
   font-size: 26px;
-  transform: translate(0%, -60%);
+  position: relative;
+  top: -35px;
   font-style: bold;
   background: transparent;
-  position: relative;
   cursor: pointer;
 }
 
@@ -174,13 +211,26 @@ label.logo {
   width: 250px;
 }
 
+@media (max-width: 576px) {
+  .home h1 {
+    font-size: 50px;
+  }
+  .home h3 {
+    font-size: 15px;
+  }
+  .more-about-me {
+    font-size: 17px;
+  }
+  .IL1 {
+    width: 200px;
+  }
+}
 @media (max-width: 768px) {
   .home h1 {
     font-size: 55px;
   }
   .home h3 {
     font-size: 18px;
-    transform: translate(0%, -90%);
   }
   .more-about-me {
     font-size: 20px;
