@@ -131,12 +131,14 @@ label.logo {
 }
 
 .home h1 {
+  padding: 0px 30px;
   font-size: 65px;
   transform: translate(0%, -90%);
   font-weight: 600;
 }
 
 .home h3 {
+  padding: 0px 20px;
   font-size: 23px;
   transform: translate(0%, -160%);
 }
@@ -177,7 +179,8 @@ label.logo {
     font-size: 55px;
   }
   .home h3 {
-    font-size: 20px;
+    font-size: 18px;
+    transform: translate(0%, -90%);
   }
   .more-about-me {
     font-size: 20px;
