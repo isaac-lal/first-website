@@ -12,8 +12,11 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: black;
+  color: white;
 }
 
+/* ---------- NAVBAR ---------- */
+/* DEFAULT */
 nav {
   background: #212121;
   display: flex;
@@ -22,13 +25,39 @@ nav {
   padding: 10px 24px;
 }
 
-label.logo {
+/* Logo: INDEX */
+.index-logo {
   text-align: left;
   font-size: 45px;
   font-weight: 900;
   color: deepskyblue;
 }
 
+/* Logo: ABOUT */
+.about-logo {
+  text-align: left;
+  font-size: 45px;
+  font-weight: 900;
+  color: orange;
+}
+
+/* Logo: WORK */
+.work-logo {
+  text-align: left;
+  font-size: 45px;
+  font-weight: 900;
+  color: crimson;
+}
+
+/* Logo: CONTACT */
+.contact-logo {
+  text-align: left;
+  font-size: 45px;
+  font-weight: 900;
+  color: magenta;
+}
+
+/* Nav Menu: DEFAULT */
 .nav-menu {
   display: flex;
   justify-content: space-between;
@@ -37,17 +66,18 @@ label.logo {
   list-style: none;
 }
 
-.nav-link {
+/* Nav Link: INDEX */
+.index-nav-link {
   color: white;
   text-decoration: none;
   transition: 0.25s;
 }
 
-.nav-link:hover {
+.index-nav-link:hover {
   color: deepskyblue;
 }
 
-.nav-link:after {
+.index-nav-link:after {
   content: "";
   width: 0%;
   height: 2px;
@@ -57,10 +87,86 @@ label.logo {
   transition: 0.25s;
 }
 
-.nav-link:hover::after {
+.index-nav-link:hover::after {
   width: 100%;
 }
 
+/* Nav Link: ABOUT */
+.about-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.about-nav-link:hover {
+  color: orange;
+}
+
+.about-nav-link:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: orange;
+  display: block;
+  margin: auto;
+  transition: 0.25s;
+}
+
+.about-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Nav Link: WORK */
+.work-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.work-nav-link:hover {
+  color: crimson;
+}
+
+.work-nav-link:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: crimson;
+  display: block;
+  margin: auto;
+  transition: 0.25s;
+}
+
+.work-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Nav Link: CONTACT */
+.contact-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.contact-nav-link:hover {
+  color: magenta;
+}
+
+.contact-nav-link:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: magenta;
+  display: block;
+  margin: auto;
+  transition: 0.25s;
+}
+
+.contact-nav-link:hover::after {
+  width: 100%;
+}
+
+/* JavaScript Menu */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -75,6 +181,7 @@ label.logo {
   background-color: white;
 }
 
+/* Navbar: Smaller Devices */
 @media (max-width: 576px) {
   .hamburger {
     display: block;
@@ -145,8 +252,9 @@ label.logo {
     font-size: 40px;
   }
 }
+/* ---------- INDEX ---------- */
+/* Layout */
 .home {
-  color: white;
   text-align: center;
   background-image: url(../images/background/space.jpeg);
   width: 100%;
@@ -165,6 +273,7 @@ label.logo {
   z-index: -1;
 }
 
+/* Text Style */
 .home h1 {
   position: relative;
   top: -70px;
@@ -177,16 +286,18 @@ label.logo {
   position: relative;
   top: -45px;
   padding: 0px 20px;
-  font-size: 23px;
+  font-size: 28px;
 }
 
-.more-about-me {
-  display: inline-block;
-  text-decoration: none;
+/* Redirect Buttons */
+.about-button {
   color: white;
-  border: 1px solid white;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid white;
   padding: 12px 34px;
-  font-size: 26px;
+  margin: 10px;
+  font-size: 23px;
   position: relative;
   top: -35px;
   font-style: bold;
@@ -194,14 +305,32 @@ label.logo {
   cursor: pointer;
 }
 
-.more-about-me:hover {
-  border: 2px solid white;
-  background: deepskyblue;
+.about-button:hover {
+  background: orange;
   transition: 1s;
-  color: white;
-  text-decoration: none;
 }
 
+.work-button {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid white;
+  padding: 12px 34px;
+  margin: 10px;
+  font-size: 23px;
+  position: relative;
+  top: -35px;
+  font-style: bold;
+  background: transparent;
+  cursor: pointer;
+}
+
+.work-button:hover {
+  background: crimson;
+  transition: 1s;
+}
+
+/* Profile Picture */
 .IL1 {
   -webkit-clip-path: circle();
           clip-path: circle();
@@ -211,14 +340,18 @@ label.logo {
   width: 250px;
 }
 
+/* Smaller Devices */
 @media (max-width: 576px) {
   .home h1 {
     font-size: 50px;
   }
   .home h3 {
-    font-size: 15px;
+    font-size: 21px;
   }
-  .more-about-me {
+  .about-button {
+    font-size: 17px;
+  }
+  .work-button {
     font-size: 17px;
   }
   .IL1 {
@@ -230,73 +363,207 @@ label.logo {
     font-size: 55px;
   }
   .home h3 {
-    font-size: 18px;
+    font-size: 24px;
   }
-  .more-about-me {
-    font-size: 20px;
+  .about-button {
+    font-size: 19px;
+  }
+  .work-button {
+    font-size: 19px;
   }
   .IL1 {
     width: 225px;
   }
 }
 .about {
-  height: 50vh;
-  width: 100%;
-  height: auto;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/background/RainyNYC.jpg);
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
-  text-align: center;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
+  color: white;
+  position: relative;
 }
 
-.description {
-  margin: 20px;
+.about h1 {
+  padding: 20px 0;
+  font-size: 50px;
+}
+
+.about h2 {
+  padding-bottom: 20px;
+}
+
+.work-beginning {
+  padding: 0px 10px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+}
+
+.languages-tools:hover {
+  color: deepskyblue;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background: #212121;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+form h1 {
+  font-size: 65px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  border: 0px;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #323232;
+  font-size: 16px;
   color: white;
 }
 
-.location {
-  width: 80%;
-  margin: auto;
-  padding: 80px 0;
+form button {
+  padding: 15px;
+  background: #808080;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
 }
 
-.location iframe {
-  width: 100%;
+form button:hover {
+  background-color: magenta;
+  transition: 0.5s;
 }
 
+/* ---------- FOOTER ---------- */
+/* DEFAULT */
 footer {
   margin-top: auto;
   padding: 10px;
   background: #212121;
 }
 
-.socials {
+/* Socials: INDEX */
+.index-socials {
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-.socials li {
+.index-socials li {
   margin: 0px 10px;
   cursor: pointer;
 }
 
-.socials a {
+.index-socials a {
   text-decoration: none;
   color: white;
 }
 
-.socials a i {
+.index-socials a i {
   font-size: 30px;
   transition: color 0.5s ease;
 }
 
-.socials a:hover i {
+.index-socials a:hover i {
   color: deepskyblue;
+}
+
+/* Socials: ABOUT */
+.about-socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.about-socials li {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.about-socials a {
+  text-decoration: none;
+  color: white;
+}
+
+.about-socials a i {
+  font-size: 30px;
+  transition: color 0.5s ease;
+}
+
+.about-socials a:hover i {
+  color: orange;
+}
+
+/* Socials: WORK */
+.work-socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.work-socials li {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.work-socials a {
+  text-decoration: none;
+  color: white;
+}
+
+.work-socials a i {
+  font-size: 30px;
+  transition: color 0.5s ease;
+}
+
+.work-socials a:hover i {
+  color: crimson;
+}
+
+/* Socials: CONTACT */
+.contact-socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-socials li {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.contact-socials a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-socials a i {
+  font-size: 30px;
+  transition: color 0.5s ease;
+}
+
+.contact-socials a:hover i {
+  color: magenta;
 }
 
 footer p {

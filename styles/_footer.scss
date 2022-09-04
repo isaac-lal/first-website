@@ -1,32 +1,114 @@
+/* ---------- FOOTER ---------- */
+
+/* DEFAULT */
 footer {
     margin-top: auto;
     padding: 10px;
     background: #212121; 
 }
 
-.socials {
+/* Socials: INDEX */
+.index-socials {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-.socials li {
+.index-socials li {
     margin: 0px 10px;
     cursor: pointer;
 }
 
-.socials a {
+.index-socials a {
     text-decoration: none;
     color: white;
 }
 
-.socials a i {
+.index-socials a i {
     font-size: 30px;
     transition: color .5s ease
 }
 
-.socials a:hover i {
+.index-socials a:hover i {
     color: deepskyblue;
+}
+
+/* Socials: ABOUT */
+.about-socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.about-socials li {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.about-socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.about-socials a i {
+    font-size: 30px;
+    transition: color .5s ease
+}
+
+.about-socials a:hover i {
+    color: orange;
+}
+
+/* Socials: WORK */
+.work-socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.work-socials li {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.work-socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.work-socials a i {
+    font-size: 30px;
+    transition: color .5s ease
+}
+
+.work-socials a:hover i {
+    color: crimson;
+}
+
+/* Socials: CONTACT */
+.contact-socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-socials li {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.contact-socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-socials a i {
+    font-size: 30px;
+    transition: color .5s ease
+}
+
+.contact-socials a:hover i {
+    color: magenta;
 }
 
 footer p {

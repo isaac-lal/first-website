@@ -1,5 +1,7 @@
+/* ---------- INDEX ---------- */
+
+/* Layout */
 .home {
-    color: white;
     text-align: center;
     background-image: url(../images/background/space.jpeg);
     width: 100%;
@@ -17,6 +19,7 @@
     z-index: -1;
 }
 
+/* Text Style */
 .home h1 {
     position: relative;
     top: -70px;
@@ -29,31 +32,51 @@
     position: relative;
     top: -45px;
     padding: 0px 20px;
-    font-size: 23px;
+    font-size: 28px;
 }
 
-.more-about-me {
-    display: inline-block;
-    text-decoration: none;
+/* Redirect Buttons */
+.about-button {
     color: white;
-    border: 1px solid white;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid white;
     padding: 12px 34px;
-    font-size: 26px;
+    margin: 10px;
+    font-size: 23px;
     position: relative;
     top: -35px;
     font-style: bold;
     background: transparent;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
-.more-about-me:hover {
-    border: 2px solid white;
-    background: deepskyblue;
+.about-button:hover {
+    background: orange;
     transition: 1s;
+}
+
+.work-button {
     color: white;
     text-decoration: none;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 12px 34px;
+    margin: 10px;
+    font-size: 23px;
+    position: relative;
+    top: -35px;
+    font-style: bold;
+    background: transparent;
+    cursor: pointer; 
 }
 
+.work-button:hover {
+    background: crimson;
+    transition: 1s;
+}
+
+/* Profile Picture */
 .IL1 {
     clip-path: circle();
     display: block;
@@ -62,16 +85,21 @@
     width: 250px;
 }
 
+/* Smaller Devices */
 @media(max-width: 576px) {
     .home h1 {
         font-size: 50px;
     }
 
     .home h3 {
-        font-size: 15px;
+        font-size: 21px;
     }
 
-    .more-about-me {
+    .about-button {
+        font-size: 17px;
+    }
+    
+    .work-button {
         font-size: 17px;
     }
 
@@ -86,11 +114,15 @@
     }
 
     .home h3 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
-    .more-about-me {
-        font-size: 20px;
+    .about-button {
+        font-size: 19px;
+    }
+
+    .work-button {
+        font-size: 19px;
     }
 
     .IL1 {

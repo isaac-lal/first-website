@@ -1,3 +1,6 @@
+/* ---------- NAVBAR ---------- */
+
+/* DEFAULT */
 nav {
     background: #212121;
     display: flex;
@@ -6,13 +9,39 @@ nav {
     padding: 10px 24px;
 }
 
-label.logo {
+/* Logo: INDEX */
+.index-logo {
     text-align: left;
     font-size: 45px;
     font-weight: 900;
     color: deepskyblue;
 }
 
+/* Logo: ABOUT */
+.about-logo {
+    text-align: left;
+    font-size: 45px;
+    font-weight: 900;
+    color: orange;
+}
+
+/* Logo: WORK */
+.work-logo {
+    text-align: left;
+    font-size: 45px;
+    font-weight: 900;
+    color: crimson;
+}
+
+/* Logo: CONTACT */
+.contact-logo {
+    text-align: left;
+    font-size: 45px;
+    font-weight: 900;
+    color: magenta;
+}
+
+/* Nav Menu: DEFAULT */
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -21,17 +50,18 @@ label.logo {
     list-style: none;
 }
 
-.nav-link {
+/* Nav Link: INDEX */
+.index-nav-link {
     color: white;
     text-decoration: none;
     transition: 0.25s;
 }
 
-.nav-link:hover {
+.index-nav-link:hover {
     color: deepskyblue;
 }
 
-.nav-link:after {
+.index-nav-link:after {
     content: '';
     width: 0%;
     height: 2px;
@@ -41,10 +71,86 @@ label.logo {
     transition: 0.25s;
 }
 
-.nav-link:hover::after {
+.index-nav-link:hover::after {
     width: 100%;
 }
 
+/* Nav Link: ABOUT */
+.about-nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.about-nav-link:hover {
+    color: orange;
+}
+
+.about-nav-link:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.25s;
+}
+
+.about-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Nav Link: WORK */
+.work-nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.work-nav-link:hover {
+    color: crimson;
+}
+
+.work-nav-link:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: crimson;
+    display: block;
+    margin: auto;
+    transition: 0.25s;
+}
+
+.work-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Nav Link: CONTACT */
+.contact-nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.contact-nav-link:hover {
+    color: magenta;
+}
+
+.contact-nav-link:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: magenta;
+    display: block;
+    margin: auto;
+    transition: 0.25s;
+}
+
+.contact-nav-link:hover::after {
+    width: 100%;
+}
+
+/* JavaScript Menu */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -60,6 +166,7 @@ label.logo {
     background-color: white;
 }
 
+/* Navbar: Smaller Devices */
 @media(max-width: 576px) {
     .hamburger {
         display: block;

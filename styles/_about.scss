@@ -1,18 +1,13 @@
 .about {
-    height: 50vh;
-    width: 100%;
-    height:auto;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/background/RainyNYC.jpg);
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-    text-align: center;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
+    color: white;
+    position: relative;
 }
 
-.description {
-    margin: 20px;
-    color: white;
+.about h1 {
+    padding: 20px 0;
+    font-size: 50px;
+}
+
+.about h2 {
+    padding-bottom: 20px;
 }
