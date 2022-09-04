@@ -1,13 +1,17 @@
 # mod_rewrite starts here
+
 RewriteEngine on
 
 # Checking if the file does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run the Rule! (d stands for directory, % stands for check)
+
 RewriteCond %{REQUEST_FILENAME} !-d 
 
 # Check for file in directory with .html extension (f stands for file)
+
 RewriteCond %{REQUEST_FILENAME}\.html -f
 
 # Showing the page with the .html extension (^ means anything before the condition, . means allow, * means anything, $ means grab) Grabbing the result (using $1) from anything after and allowing it to pass through the rule. (NC means "Non Case", L means conditions before are ONLY applied to the specific rule and not anything else)
+
 RewriteRule ^(.*)$ $1.html [NC, L]
 
 # OVERVIEW: Grabbing the entire URL if the RewriteCond are true and showing the URL without the html file extension
